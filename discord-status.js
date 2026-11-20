@@ -17,6 +17,14 @@
     offline: 'Offline'
   };
 
+  const ACTIVITY_VERBS = {
+    0: 'Playing',
+    1: 'Streaming',
+    2: 'Listening to',
+    3: 'Watching',
+    5: 'Competing in'
+  };
+
   const panel = document.getElementById('discord-status');
   const dot = document.getElementById('discord-status-dot');
   const name = document.getElementById('discord-status-name');
@@ -52,20 +60,40 @@
   }
 
   function activityText(data) {
-    if (!cfg.showActivity || !Array.isArray(data.activities)) return '';
+    if (!cfg.showActivity) return '';
 
-    const custom = data.activities.find(item => item.type === 4 && item.state);
-    const game = data.activities.find(item => item.type === 0);
-    const listening = data.activities.find(item => item.type === 2);
+    const activities = Array.isArray(data.activities) ? data.activities : [];
 
-    if (custom) return custom.state;
-    if (game) return game.name + (game.details ? ' — ' + game.details : '');
-    if (listening) {
-      const song = listening.details || listening.name || 'Music';
-      const artist = listening.state ? ' — ' + listening.state : '';
-      return 'Listening to ' + song + artist;
+    // Discord activity types: 0 Playing, 1 Streaming, 2 Listening,
+    // 3 Watching, 4 Custom status, 5 Competing.
+    for (const item of activities) {
+      const type = Number(item.type);
+      const verb = ACTIVITY_VERBS[type];
+      if (!verb) continue;
+
+      if (type === 2) {
+        const song = item.details || item.name || 'Music';
+        const artist = item.state && item.state !== song ? item.state : '';
+        return 'Activity: Listening to ' + song + (artist ? ' — ' + artist : '');
+      }
+
+      const subject = item.name || 'Activity';
+      const extra = [item.details, item.state]
+        .filter(part => part && part !== subject)
+        .filter((part, index, parts) => parts.indexOf(part) === index);
+
+      return 'Activity: ' + verb + ' ' + subject + (extra.length ? ' — ' + extra.join(' — ') : '');
     }
-    return '';
+
+    // Older Lanyard payloads expose Spotify separately from activities.
+    if (data.listening_to_spotify && data.spotify) {
+      const song = data.spotify.song || 'Music';
+      const artist = data.spotify.artist && data.spotify.artist !== song ? data.spotify.artist : '';
+      return 'Activity: Listening to ' + song + (artist ? ' — ' + artist : '');
+    }
+
+    const custom = activities.find(item => Number(item.type) === 4 && item.state);
+    return custom ? custom.state : '';
   }
 
   function render(data) {
@@ -89,6 +117,7 @@
 
     const details = activityText(data);
     activity.textContent = details;
+    activity.title = details;
     activity.href = profileUrl;
     activity.style.display = details ? '' : 'none';
   }
