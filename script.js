@@ -31,47 +31,6 @@ function placeholderImage(label) {
   return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
 }
 
-class cursorTrailEffect {
-  constructor({ length = 10, size = 8, speed = 0.2 } = {}) {
-    this.speed = speed;
-    this.points = [];
-    this.dots = [];
-    this.pointer = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-
-    for (let i = 0; i < length; i++) {
-      const holder = document.createElement('div');
-      holder.className = 'cursor-trail';
-      const dot = document.createElement('div');
-      dot.className = 'cursor-trail-dot';
-      dot.style.width = size + 'px';
-      dot.style.height = size + 'px';
-      holder.appendChild(dot);
-      document.body.appendChild(holder);
-      this.dots.push(holder);
-      this.points.push({ x: this.pointer.x, y: this.pointer.y });
-    }
-
-    window.addEventListener('mousemove', (event) => {
-      this.pointer.x = event.clientX;
-      this.pointer.y = event.clientY;
-    });
-
-    this.animate();
-  }
-
-  animate() {
-    let target = this.pointer;
-    this.points.forEach((point, index) => {
-      point.x += (target.x - point.x) * this.speed;
-      point.y += (target.y - point.y) * this.speed;
-      this.dots[index].style.left = point.x + 'px';
-      this.dots[index].style.top = point.y + 'px';
-      target = point;
-    });
-    requestAnimationFrame(() => this.animate());
-  }
-}
-
 let hasUserInteracted = false;
 
 function initMedia() {
@@ -313,18 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
         profileContainer.classList.add('orbit');
       }}
     );
-    if (!isTouchDevice) {
-      try {
-        new cursorTrailEffect({
-          length: 10,
-          size: 8,
-          speed: 0.2
-        });
-        console.log("Cursor trail initialized");
-      } catch (err) {
-        console.error("Failed to initialize cursor trail effect:", err);
-      }
-    }
     typeWriterName();
     typeWriterBio();
   });
@@ -346,18 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
         profileContainer.classList.add('orbit');
       }}
     );
-    if (!isTouchDevice) {
-      try {
-        new cursorTrailEffect({
-          length: 10,
-          size: 8,
-          speed: 0.2
-        });
-        console.log("Cursor trail initialized");
-      } catch (err) {
-        console.error("Failed to initialize cursor trail effect:", err);
-      }
-    }
     typeWriterName();
     typeWriterBio();
   });
