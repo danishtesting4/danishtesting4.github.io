@@ -22,6 +22,14 @@ const SITE_CONFIG = {
     "\"I Make things configurable\""
   ],
 
+  // Browser tab title animation. Leave messages empty to use the name and bio lines.
+  tabTitle: {
+    messages: [],
+    typeSpeed: 90,
+    eraseSpeed: 45,
+    holdTime: 1600
+  },
+
   // Social links. Icons are loaded from assets/.
   socials: [
     { label: "Discord", href: "https://discord.com/users/1346745954342015069", icon: "assets/discord.svg" },

@@ -14,6 +14,7 @@ Just open `index.html` in your browser with a live server. No setup required.
 Almost everything you want to change lives in **`config.js`**:
 
 - `name` and `bioMessages` — the profile name and rotating bio text
+- `tabTitle` — optional browser-tab title animation settings
 - `socials` — your social links and their icon files
 - `badges` — badges shown next to your name
 - `appearance` and `media` — the single accent color, background video, and optional music

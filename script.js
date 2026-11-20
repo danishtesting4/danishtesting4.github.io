@@ -86,6 +86,55 @@ function initMedia() {
   });
 }
 
+function startTabTitleAnimation() {
+  const settings = (config.tabTitle && typeof config.tabTitle === 'object') ? config.tabTitle : {};
+  const fallback = [config.name]
+    .concat(Array.isArray(config.bioMessages) ? config.bioMessages : [])
+    .map(value => String(value || '').trim())
+    .filter(Boolean);
+
+  const messages = (Array.isArray(settings.messages) && settings.messages.length
+    ? settings.messages
+    : fallback)
+    .map(value => String(value || '').trim())
+    .filter(Boolean);
+
+  if (!messages.length) return;
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.title = messages[0];
+    return;
+  }
+
+  const typeSpeed = Math.max(30, Number(settings.typeSpeed) || 90);
+  const eraseSpeed = Math.max(20, Number(settings.eraseSpeed) || 45);
+  const holdTime = Math.max(300, Number(settings.holdTime) || 1600);
+
+  let messageIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function tick() {
+    const message = messages[messageIndex];
+    charIndex += deleting ? -1 : 1;
+    document.title = message.slice(0, charIndex);
+
+    let delay = deleting ? eraseSpeed : typeSpeed;
+    if (!deleting && charIndex >= message.length) {
+      deleting = true;
+      delay = holdTime;
+    } else if (deleting && charIndex <= 0) {
+      deleting = false;
+      messageIndex = (messageIndex + 1) % messages.length;
+      delay = 400;
+    }
+
+    setTimeout(tick, delay);
+  }
+
+  setTimeout(tick, 600);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const startScreen = document.getElementById('start-screen');
   const startText = document.getElementById('start-text');
@@ -546,4 +595,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
  
   typeWriterStart();
+  startTabTitleAnimation();
 });
