@@ -5,7 +5,6 @@ const config = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG : {
   startMessage: "Click here to enter",
   name: "YOUR NAME",
   bioMessages: ["Add your bio here — edit config.js."],
-  visitorCountBase: 0,
   socials: [],
   badges: [],
   appearance: { accentColor: '#00CED1' },
@@ -92,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const startText = document.getElementById('start-text');
   const profileName = document.getElementById('profile-name');
   const profileBio = document.getElementById('profile-bio');
-  const visitorCount = document.getElementById('visitor-count');
   const backgroundMusic = document.getElementById('background-music');
   const volumeIcon = document.getElementById('volume-icon');
   const volumeSlider = document.getElementById('volume-slider');
@@ -248,28 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
     startText.textContent = startTextContent + (startCursorVisible ? '|' : ' ');
   }, 500);
 
-
-  function initializeVisitorCounter() {
-    let totalVisitors = localStorage.getItem('totalVisitorCount');
-    if (!totalVisitors) {
-      totalVisitors = config.visitorCountBase;
-      localStorage.setItem('totalVisitorCount', totalVisitors);
-    } else {
-      totalVisitors = parseInt(totalVisitors);
-    }
-
-    const hasVisited = localStorage.getItem('hasVisited');
-    if (!hasVisited) {
-      totalVisitors++;
-      localStorage.setItem('totalVisitorCount', totalVisitors);
-      localStorage.setItem('hasVisited', 'true');
-    }
-
-    visitorCount.textContent = totalVisitors.toLocaleString();
-  }
-
-
-  initializeVisitorCounter();
 
 
   startScreen.addEventListener('click', () => {
@@ -457,7 +433,6 @@ document.addEventListener('DOMContentLoaded', () => {
       profilePicture.style.opacity = '1';
       profileName.style.opacity = '1';
       profileBio.style.opacity = '1';
-      visitorCount.style.opacity = '1';
     } else {
       profileBlock.style.background = `rgba(0, 0, 0, ${opacity})`;
       profileBlock.style.borderOpacity = opacity;
@@ -476,7 +451,6 @@ document.addEventListener('DOMContentLoaded', () => {
       profilePicture.style.opacity = '1';
       profileName.style.opacity = '1';
       profileBio.style.opacity = '1';
-      visitorCount.style.opacity = '1';
     }
   });
 

@@ -22,10 +22,6 @@ const SITE_CONFIG = {
     "\"I Make things configurable\""
   ],
 
-  // Starting visitor count. This is stored in the browser's localStorage,
-  // so it is a cosmetic counter, not a real server-side tracker.
-  visitorCountBase: 0,
-
   // Social links. Icons are loaded from assets/.
   socials: [
     { label: "Discord", href: "https://discord.com/users/1346745954342015069", icon: "assets/discord.svg" },

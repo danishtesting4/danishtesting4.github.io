@@ -253,16 +253,6 @@ body {
 }
 
 
-.visitor-icon {
-  stroke: var(--primary-color);
-}
-
-
-.visitor-count {
-  color: var(--primary-color);
-}
-
-
 .volume-icon {
   stroke: var(--primary-color);
 }
@@ -463,20 +453,6 @@ body {
   .social-icon {
     width: 20px;
     height: 20px;
-  }
-
-
-  .visitor-counter {
-    font-size: 10px;
-    padding: 6px 10px;
-    bottom: 8px;
-    left: 10px;
-    transform: none;
-  }
-
-  .visitor-icon {
-    width: 14px;
-    height: 14px;
   }
 
 

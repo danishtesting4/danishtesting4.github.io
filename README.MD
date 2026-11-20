@@ -17,7 +17,6 @@ Almost everything you want to change lives in **`config.js`**:
 - `socials` — your social links and their icon files
 - `badges` — badges shown next to your name
 - `appearance` and `media` — the single accent color, background video, and optional music
-- `visitorCountBase` — the starting number for the cosmetic visitor counter
 - `discord` — your Discord user ID, activity display, avatar toggle, and refresh rate
 
 Media files go in `assets/` (see `assets/README.md` for the expected filenames).
