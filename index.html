@@ -16,11 +16,26 @@
         
         .custom-cursor {
             display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background-image: url('assets/chroma/normal-select-sheet.png');
+            background-repeat: no-repeat;
+            background-size: auto 32px;
+            background-position: 0 0;
+            pointer-events: none;
+            z-index: 10000;
+            will-change: left, top, background-position;
         }
 
-        
-        body:not(.touch-device) {
-            cursor: url('assets/chroma/normal-select.cur'), auto;
+        .custom-cursor.link {
+            background-image: url('assets/chroma/link-select-sheet.png');
+        }
+
+        .custom-cursor.pressed {
+            transform: scale(0.85);
         }
 
         body {
@@ -690,21 +705,15 @@
         }
 
         
-        body:not(.touch-device),
-        body:not(.touch-device) * {
-            cursor: url('assets/chroma/normal-select.cur'), auto !important;
+        body.custom-cursor-ready:not(.touch-device),
+        body.custom-cursor-ready:not(.touch-device) * {
+            cursor: none !important;
         }
 
-        body:not(.touch-device) a,
-        body:not(.touch-device) button,
-        body:not(.touch-device) #start-screen,
-        body:not(.touch-device) .profile-picture,
-        body:not(.touch-device) .volume-icon {
-            cursor: url('assets/chroma/link-select.cur'), pointer !important;
-        }
-
-        body:not(.touch-device) .slider::-webkit-slider-thumb {
-            cursor: url('assets/chroma/handwriting.cur'), pointer !important;
+        @media (pointer: coarse) {
+            .custom-cursor {
+                display: none !important;
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Retro+Gaming&display=swap" rel="stylesheet">

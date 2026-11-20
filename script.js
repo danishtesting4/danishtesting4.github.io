@@ -179,39 +179,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (isTouchDevice) {
     document.body.classList.add('touch-device');
-    
-    document.addEventListener('touchstart', (e) => {
-      const touch = e.touches[0];
-      cursor.style.left = touch.clientX + 'px';
-      cursor.style.top = touch.clientY + 'px';
+    if (cursor) cursor.style.display = 'none';
+  } else if (cursor) {
+    // The Chroma .ani files are sprite sheets rendered as 30 PNG frames.
+    const FRAME_SIZE = 32;
+    const FRAME_COUNT = 30;
+    const FRAME_MS = 60;
+    const INTERACTIVE = 'a, button, #start-screen, .profile-picture, .volume-icon';
+
+    let frameIndex = -1;
+    let linkMode = null;
+    const startedAt = performance.now();
+
+    function updateCursor(event, isLink) {
+      if (isLink !== linkMode) {
+        linkMode = isLink;
+        cursor.classList.toggle('link', isLink);
+      }
+
+      const hotspotX = isLink ? 13 : 0;
+      const hotspotY = isLink ? 4 : 0;
+      cursor.style.left = (event.clientX - hotspotX) + 'px';
+      cursor.style.top = (event.clientY - hotspotY) + 'px';
       cursor.style.display = 'block';
-    });
+    }
 
-    document.addEventListener('touchmove', (e) => {
-      const touch = e.touches[0];
-      cursor.style.left = touch.clientX + 'px';
-      cursor.style.top = touch.clientY + 'px';
-      cursor.style.display = 'block';
-    });
+    document.addEventListener('mousemove', (event) => {
+      const target = event.target && event.target.closest ? event.target : null;
+      updateCursor(event, !!(target && target.closest(INTERACTIVE)));
+    }, { passive: true });
 
-    document.addEventListener('touchend', () => {
-      cursor.style.display = 'none'; 
-    });
-  } else {
+    document.addEventListener('mousedown', () => cursor.classList.add('pressed'));
+    document.addEventListener('mouseup', () => cursor.classList.remove('pressed'));
+    document.addEventListener('mouseleave', () => { cursor.style.display = 'none'; });
+    document.addEventListener('mouseenter', (event) => updateCursor(event, false));
 
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-      cursor.style.display = 'block';
-    });
+    function animateCursor(now) {
+      const frame = Math.floor(((now - startedAt) / FRAME_MS) % FRAME_COUNT);
+      if (frame !== frameIndex) {
+        frameIndex = frame;
+        cursor.style.backgroundPosition = (-frame * FRAME_SIZE) + 'px 0';
+      }
+      requestAnimationFrame(animateCursor);
+    }
 
-    document.addEventListener('mousedown', () => {
-      cursor.style.transform = 'scale(0.8) translate(-50%, -50%)';
-    });
-
-    document.addEventListener('mouseup', () => {
-      cursor.style.transform = 'scale(1) translate(-50%, -50%)';
-    });
+    requestAnimationFrame(animateCursor);
+    document.body.classList.add('custom-cursor-ready');
   }
 
 

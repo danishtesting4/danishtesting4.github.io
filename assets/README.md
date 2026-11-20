@@ -21,10 +21,13 @@ The main profile picture is loaded from your Discord account via `discord-status
 
 ## Custom cursor
 The `chroma/` folder contains the Chroma cursor set from RW-Designer:
-- `normal-select.cur` — default cursor (first frame extracted from `normal-select.ani`)
-- `link-select.cur` — links and buttons (first frame extracted from `link-select.ani`)
-- `handwriting.cur` — slider thumb
-- `normal-select.ani` and `link-select.ani` — original animated source files
+- `normal-select.ani` — original animated default cursor
+- `link-select.ani` — original animated link cursor
+- `normal-select-sheet.png` — 30-frame sprite rendered by the site as the default cursor
+- `link-select-sheet.png` — 30-frame sprite rendered by the site for links and buttons
+- `handwriting.cur` — original static cursor from the set
+
+Chrome does not reliably animate `.ani` CSS cursors, so the site renders frames from the original `.ani` files as a cursor sprite.
 
 Source: https://www.rw-designer.com/cursor-downloadset/chroma.zip
 
