@@ -19,20 +19,12 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 1000px;
-  cursor: none;
+  cursor: url('assets/chroma/normal-select.ani'), auto;
 }
 
 
 .custom-cursor {
-  position: fixed;
-  width: 32px;
-  height: 32px;
-  background: radial-gradient(circle, rgba(0, 206, 209, 0.75) 0%, rgba(0, 206, 209, 0) 70%);
-  background-size: contain;
-  pointer-events: none;
-  z-index: 10000;
-  transition: transform 0.1s ease-out;
-  filter: hue-rotate(var(--cursor-hue, 0deg)); 
+  display: none;
 }
 
 
@@ -623,4 +615,21 @@ body {
   30% {
     clip: rect(65px, 9999px, 45px, 0);
   }
+}
+
+body:not(.touch-device),
+body:not(.touch-device) * {
+  cursor: url('assets/chroma/normal-select.ani'), auto !important;
+}
+
+body:not(.touch-device) a,
+body:not(.touch-device) button,
+body:not(.touch-device) #start-screen,
+body:not(.touch-device) .profile-picture,
+body:not(.touch-device) .volume-icon {
+  cursor: url('assets/chroma/link-select.ani'), pointer !important;
+}
+
+body:not(.touch-device) .slider::-webkit-slider-thumb {
+  cursor: url('assets/chroma/handwriting.cur'), pointer !important;
 }

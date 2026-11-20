@@ -19,4 +19,12 @@ Included SVG icons used by `config.js`:
 
 The main profile picture is loaded from your Discord account via `discord-status.js`.
 
+## Custom cursor
+The `chroma/` folder contains the Chroma cursor set from RW-Designer:
+- `normal-select.ani` — default cursor
+- `link-select.ani` — links and buttons
+- `handwriting.cur` — slider thumb
+
+Source: https://www.rw-designer.com/cursor-downloadset/chroma.zip
+
 Tip: you can change any of these filenames in `config.js` if you prefer your own names.

@@ -15,19 +15,12 @@
 
         
         .custom-cursor {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            background: radial-gradient(circle, rgba(0, 206, 209, 0.75) 0%, rgba(0, 206, 209, 0) 70%);
-            background-size: contain;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
+            display: none;
         }
 
         
         body:not(.touch-device) {
-            cursor: none;
+            cursor: url('assets/chroma/normal-select.ani'), auto;
         }
 
         body {
@@ -694,6 +687,24 @@
                 font-size: 18px;
                 padding: 0 20px;
             }
+        }
+
+        
+        body:not(.touch-device),
+        body:not(.touch-device) * {
+            cursor: url('assets/chroma/normal-select.ani'), auto !important;
+        }
+
+        body:not(.touch-device) a,
+        body:not(.touch-device) button,
+        body:not(.touch-device) #start-screen,
+        body:not(.touch-device) .profile-picture,
+        body:not(.touch-device) .volume-icon {
+            cursor: url('assets/chroma/link-select.ani'), pointer !important;
+        }
+
+        body:not(.touch-device) .slider::-webkit-slider-thumb {
+            cursor: url('assets/chroma/handwriting.cur'), pointer !important;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Retro+Gaming&display=swap" rel="stylesheet">
