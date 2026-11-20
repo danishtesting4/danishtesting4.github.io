@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
+    <link rel="icon" href="assets/discord.svg" type="image/svg+xml">
     <style>
         * {
             margin: 0;
@@ -17,7 +18,7 @@
             position: fixed;
             width: 40px;
             height: 40px;
-            background: url('assets/custom_cursor.png') no-repeat center center;
+            background: radial-gradient(circle, rgba(0, 206, 209, 0.75) 0%, rgba(0, 206, 209, 0) 70%);
             background-size: contain;
             pointer-events: none;
             z-index: 9999;
@@ -223,15 +224,8 @@
         }
 
         
-        @font-face {
-            font-family: 'Angel Wish';
-            src: url('assets/Angel_wish.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
         #profile-name {
-            font-family: 'Angel Wish', sans-serif;
+            font-family: 'Retro Gaming', monospace;
             font-size: 32px;
             font-weight: bold;
             letter-spacing: 3px;
@@ -726,7 +720,7 @@
         <div id="profile-block">
             <div class="profile-header">
                 <div class="profile-container">
-                    <img src="assets/profile.gif" alt="Profile" class="profile-picture">
+                    <img src="assets/discord.svg" alt="Profile" class="profile-picture">
                 </div>
                 <div class="profile-info">
                     <div class="name-and-badges">
@@ -792,7 +786,7 @@
 
 
     <audio id="background-music" loop>
-        <source src="assets/background_music.mp3" type="audio/mp3">
+        <source type="audio/mp3">
     </audio>
 
 

@@ -17,11 +17,6 @@ Included SVG icons used by `config.js`:
 - `owner.svg`
 - `hated.svg`
 
-Optional replacements:
-- `custom_cursor.png`
-- `profile.gif` (only used if `discord.useAsProfilePicture` is `false`)
-
-## Font
-- `Angel_wish.ttf` (or any font renamed to that filename)
+The main profile picture is loaded from your Discord account via `discord-status.js`.
 
 Tip: you can change any of these filenames in `config.js` if you prefer your own names.

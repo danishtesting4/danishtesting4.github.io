@@ -27,7 +27,7 @@ body {
   position: fixed;
   width: 32px;
   height: 32px;
-  background: url('assets/custom_cursor.png') no-repeat center center;
+  background: radial-gradient(circle, rgba(0, 206, 209, 0.75) 0%, rgba(0, 206, 209, 0) 70%);
   background-size: contain;
   pointer-events: none;
   z-index: 10000;
