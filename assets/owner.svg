@@ -1,0 +1,6 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <title>Owner</title>
+  <circle cx="12" cy="12" r="11" fill="#101018" stroke="#FFD166" stroke-width="1.5"/>
+  <path d="M4 8l4 3 4-6 4 6 4-3-1.5 9h-13L4 8z" fill="#FFD166"/>
+  <circle cx="12" cy="13.5" r="2" fill="#101018"/>
+</svg>

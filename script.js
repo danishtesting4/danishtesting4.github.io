@@ -123,11 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function addImageFallbacks() {
-    document.querySelectorAll('img').forEach(img => {
-      img.addEventListener('error', () => {
-        img.src = placeholderImage(img.alt || 'Asset');
-      }, { once: true });
-    });
+    document.addEventListener('error', (event) => {
+      const img = event.target;
+      if (!(img instanceof HTMLImageElement) || img.dataset.fallbackApplied) return;
+      img.dataset.fallbackApplied = 'true';
+      img.src = placeholderImage(img.alt || 'Asset');
+    }, true);
   }
 
   function syncMediaSources() {
@@ -160,10 +161,10 @@ document.addEventListener('DOMContentLoaded', () => {
     source.addEventListener('error', hideMissingVideo);
   });
 
+  addImageFallbacks();
   renderBadges();
   renderSocials();
   syncMediaSources();
-  addImageFallbacks();
 
   if (config.appearance && config.appearance.accentColor) {
     document.documentElement.style.setProperty('--primary-color', config.appearance.accentColor);

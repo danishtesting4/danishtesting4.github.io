@@ -11,11 +11,15 @@ a plain gradient background instead of breaking.
 - `background.mp4` (themes and their extra videos/overlays have been removed)
 
 ## Images / icons
+Included SVG icons used by `config.js`:
+- `discord.svg`
+- `github.svg`
+- `owner.svg`
+- `hated.svg`
+
+Optional replacements:
 - `custom_cursor.png`
 - `profile.gif` (only used if `discord.useAsProfilePicture` is `false`)
-- `staff.gif`, `owner.gif`, `partner.gif`, `developer.png`, `bug_bounty.gif`
-- `hated_guns.gif`, `hated_fakecrime.gif`, `verified.gif`, `rule_maker.gif`
-- `discord.png`, `github.png`, `youtube.png`, `tiktok.png`
 
 ## Font
 - `Angel_wish.ttf` (or any font renamed to that filename)

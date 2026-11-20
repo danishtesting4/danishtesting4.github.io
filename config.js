@@ -28,14 +28,14 @@ const SITE_CONFIG = {
 
   // Social links. Icons are loaded from assets/.
   socials: [
-    { label: "Discord", href: "https://discord.com/users/1346745954342015069", icon: "assets/discord.png" },
-    { label: "GitHub", href: "https://github.com/danishtesting4", icon: "assets/github.png" },
+    { label: "Discord", href: "https://discord.com/users/1346745954342015069", icon: "assets/discord.svg" },
+    { label: "GitHub", href: "https://github.com/danishtesting4", icon: "assets/github.svg" },
   ],
 
   // Badges shown next to the name. Add or remove entries freely.
   badges: [
-    { label: "Owner", icon: "assets/owner.gif" },
-    { label: "Hated by Guns.lol", icon: "assets/hated_guns.gif" },
+    { label: "Owner", icon: "assets/owner.svg" },
+    { label: "Hated by Guns.lol", icon: "assets/hated.svg" },
   ],
 
   // Discord status via Lanyard (https://github.com/Phineas/lanyard)
