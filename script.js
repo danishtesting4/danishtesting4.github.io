@@ -506,60 +506,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Theme switching removed — the site now uses one fixed look.
 
- 
-  function handleTilt(e, element) {
-    const rect = element.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    let clientX, clientY;
-
-    if (e.type === 'touchmove') {
-      clientX = e.touches[0].clientX;
-      clientY = e.touches[0].clientY;
-    } else {
-      clientX = e.clientX;
-      clientY = e.clientY;
-    }
-
-    const mouseX = clientX - centerX;
-    const mouseY = clientY - centerY;
-
-    const maxTilt = 15;
-    const tiltX = (mouseY / rect.height) * maxTilt;
-    const tiltY = -(mouseX / rect.width) * maxTilt;
-
-    gsap.to(element, {
-      rotationX: tiltX,
-      rotationY: tiltY,
-      duration: 0.3,
-      ease: 'power2.out',
-      transformPerspective: 1000
-    });
-  }
-
-  profileBlock.addEventListener('mousemove', (e) => handleTilt(e, profileBlock));
-  profileBlock.addEventListener('touchmove', (e) => {
-    e.preventDefault();
-    handleTilt(e, profileBlock);
-  });
-
-  profileBlock.addEventListener('mouseleave', () => {
-    gsap.to(profileBlock, {
-      rotationX: 0,
-      rotationY: 0,
-      duration: 0.5,
-      ease: 'power2.out'
-    });
-  });
-  profileBlock.addEventListener('touchend', () => {
-    gsap.to(profileBlock, {
-      rotationX: 0,
-      rotationY: 0,
-      duration: 0.5,
-      ease: 'power2.out'
-    });
-  });
-
   profilePicture.addEventListener('mouseenter', () => {
     glitchOverlay.style.opacity = '1';
     setTimeout(() => {
