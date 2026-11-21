@@ -160,11 +160,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let lyricsLineElements = [];
   let activeLyricLineIndex = -1;
   let lyricsUserHidden = false;
+  let siteEntered = false;
 
   function setLyricsPanelVisible(visible) {
     if (!musicLyrics) return;
     const hasLyrics = !!(currentLyrics && currentLyrics.lines && currentLyrics.lines.length);
-    const show = !!visible && hasLyrics;
+    const show = !!visible && hasLyrics && siteEntered;
     musicLyrics.classList.toggle('visible', show);
     if (musicLyricsToggle) {
       musicLyricsToggle.classList.toggle('hidden', !hasLyrics);
@@ -301,6 +302,13 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         lineEl.textContent = line.text;
       }
+      lineEl.title = 'Jump to this line';
+      lineEl.addEventListener('click', () => {
+        if (!backgroundMusic) return;
+        backgroundMusic.currentTime = line.start;
+        backgroundMusic.play().catch(() => {});
+        updateLyricsHighlight(line.start);
+      });
       musicLyrics.appendChild(lineEl);
       lyricsLineElements.push(lineEl);
     });
@@ -575,6 +583,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function enterSite() {
     if (!startScreen.classList.contains('hidden')) {
+      siteEntered = true;
       startScreen.classList.add('hidden');
       profileBlock.classList.remove('hidden');
       gsap.fromTo(profileBlock,
@@ -586,6 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
       );
       typeWriterName();
       typeWriterBio();
+      setLyricsPanelVisible(!lyricsUserHidden);
     }
 
     if (musicTracks.length && backgroundMusic) {
