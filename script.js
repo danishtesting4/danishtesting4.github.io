@@ -386,9 +386,10 @@ document.addEventListener('DOMContentLoaded', () => {
       siteEntered = true;
       startScreen.classList.add('hidden');
       profileBlock.classList.remove('hidden');
+      const yOffset = window.innerWidth <= 430 ? 0 : -55;
       gsap.fromTo(profileBlock,
-        { opacity: 0, y: -50, xPercent: -50, yPercent: -50 },
-        { opacity: 1, y: 0, xPercent: -50, yPercent: -50, duration: 1, ease: 'power2.out', onComplete: () => {
+        { opacity: 0, y: -50 + yOffset, xPercent: -50, yPercent: -50 },
+        { opacity: 1, y: yOffset, xPercent: -50, yPercent: -50, duration: 1, ease: 'power2.out', onComplete: () => {
           profileBlock.classList.add('profile-appear');
           profileContainer.classList.add('orbit');
         }}
