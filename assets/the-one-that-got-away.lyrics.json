@@ -1,0 +1,2006 @@
+{
+  "synced": true,
+  "wordSync": true,
+  "lines": [
+    {
+      "start": 3.57,
+      "end": 6.165,
+      "text": "Summer after high school, when we first met",
+      "words": [
+        {
+          "text": "Summer ",
+          "start": 3.635,
+          "end": 4.062
+        },
+        {
+          "text": "after ",
+          "start": 4.062,
+          "end": 4.271
+        },
+        {
+          "text": "high ",
+          "start": 4.271,
+          "end": 4.447
+        },
+        {
+          "text": "school, ",
+          "start": 4.447,
+          "end": 4.978
+        },
+        {
+          "text": "when ",
+          "start": 4.978,
+          "end": 5.186
+        },
+        {
+          "text": "we ",
+          "start": 5.186,
+          "end": 5.354
+        },
+        {
+          "text": "first ",
+          "start": 5.354,
+          "end": 5.624
+        },
+        {
+          "text": "met",
+          "start": 5.624,
+          "end": 6.165
+        }
+      ]
+    },
+    {
+      "start": 7.08,
+      "end": 9.967,
+      "text": "We'd make out in your Mustang to Radiohead",
+      "words": [
+        {
+          "text": "We'd ",
+          "start": 7.122,
+          "end": 7.297
+        },
+        {
+          "text": "make ",
+          "start": 7.297,
+          "end": 7.478
+        },
+        {
+          "text": "out ",
+          "start": 7.478,
+          "end": 7.665
+        },
+        {
+          "text": "in ",
+          "start": 7.665,
+          "end": 7.866
+        },
+        {
+          "text": "your ",
+          "start": 7.866,
+          "end": 8.073
+        },
+        {
+          "text": "Mustang ",
+          "start": 8.073,
+          "end": 8.774
+        },
+        {
+          "text": "to ",
+          "start": 8.774,
+          "end": 8.94
+        },
+        {
+          "text": "Radiohead",
+          "start": 8.94,
+          "end": 9.967
+        }
+      ]
+    },
+    {
+      "start": 10.73,
+      "end": 14.933,
+      "text": "And on my 18th birthday, we got matching tattoos",
+      "words": [
+        {
+          "text": "And ",
+          "start": 10.794,
+          "end": 10.989
+        },
+        {
+          "text": "on ",
+          "start": 10.989,
+          "end": 11.112
+        },
+        {
+          "text": "my ",
+          "start": 11.112,
+          "end": 11.315
+        },
+        {
+          "text": "18th ",
+          "start": 11.315,
+          "end": 11.623
+        },
+        {
+          "text": "birthday, ",
+          "start": 11.623,
+          "end": 12.469
+        },
+        {
+          "text": "we ",
+          "start": 12.469,
+          "end": 12.782
+        },
+        {
+          "text": "got ",
+          "start": 12.782,
+          "end": 13.05
+        },
+        {
+          "text": "matching ",
+          "start": 13.05,
+          "end": 14.085
+        },
+        {
+          "text": "tattoos",
+          "start": 14.085,
+          "end": 14.933
+        }
+      ]
+    },
+    {
+      "start": 17.53,
+      "end": 21.011,
+      "text": "Used to steal your parents' liquor and climb to the roof",
+      "words": [
+        {
+          "text": "Used ",
+          "start": 17.582,
+          "end": 17.828
+        },
+        {
+          "text": "to ",
+          "start": 17.828,
+          "end": 17.964
+        },
+        {
+          "text": "steal ",
+          "start": 17.964,
+          "end": 18.139
+        },
+        {
+          "text": "your ",
+          "start": 18.139,
+          "end": 18.343
+        },
+        {
+          "text": "parents' ",
+          "start": 18.343,
+          "end": 18.835
+        },
+        {
+          "text": "liquor ",
+          "start": 18.835,
+          "end": 19.543
+        },
+        {
+          "text": "and ",
+          "start": 19.543,
+          "end": 19.778
+        },
+        {
+          "text": "climb ",
+          "start": 19.778,
+          "end": 20.136
+        },
+        {
+          "text": "to ",
+          "start": 20.136,
+          "end": 20.299
+        },
+        {
+          "text": "the ",
+          "start": 20.299,
+          "end": 20.521
+        },
+        {
+          "text": "roof",
+          "start": 20.521,
+          "end": 21.011
+        }
+      ]
+    },
+    {
+      "start": 21.58,
+      "end": 24.711,
+      "text": "Talk about our future like we had a clue",
+      "words": [
+        {
+          "text": "Talk ",
+          "start": 21.64,
+          "end": 21.912
+        },
+        {
+          "text": "about ",
+          "start": 21.912,
+          "end": 22.233
+        },
+        {
+          "text": "our ",
+          "start": 22.233,
+          "end": 22.453
+        },
+        {
+          "text": "future ",
+          "start": 22.453,
+          "end": 23.232
+        },
+        {
+          "text": "like ",
+          "start": 23.232,
+          "end": 23.396
+        },
+        {
+          "text": "we ",
+          "start": 23.396,
+          "end": 23.593
+        },
+        {
+          "text": "had ",
+          "start": 23.593,
+          "end": 23.888
+        },
+        {
+          "text": "a ",
+          "start": 23.888,
+          "end": 24.06
+        },
+        {
+          "text": "clue",
+          "start": 24.06,
+          "end": 24.711
+        }
+      ]
+    },
+    {
+      "start": 25.06,
+      "end": 29.278,
+      "text": "Never planned that one day, I'd be losing you",
+      "words": [
+        {
+          "text": "Never ",
+          "start": 25.082,
+          "end": 25.298
+        },
+        {
+          "text": "planned ",
+          "start": 25.298,
+          "end": 25.701
+        },
+        {
+          "text": "that ",
+          "start": 25.701,
+          "end": 25.955
+        },
+        {
+          "text": "one ",
+          "start": 25.955,
+          "end": 26.194
+        },
+        {
+          "text": "day, ",
+          "start": 26.194,
+          "end": 26.849
+        },
+        {
+          "text": "I'd ",
+          "start": 26.849,
+          "end": 27.081
+        },
+        {
+          "text": "be ",
+          "start": 27.081,
+          "end": 27.554
+        },
+        {
+          "text": "losing ",
+          "start": 27.554,
+          "end": 28.462
+        },
+        {
+          "text": "you",
+          "start": 28.462,
+          "end": 29.278
+        }
+      ]
+    },
+    {
+      "start": 30.52,
+      "end": 33.134,
+      "text": "In another life",
+      "words": [
+        {
+          "text": "In ",
+          "start": 30.561,
+          "end": 30.945
+        },
+        {
+          "text": "another ",
+          "start": 30.945,
+          "end": 32.242
+        },
+        {
+          "text": "life",
+          "start": 32.242,
+          "end": 33.134
+        }
+      ]
+    },
+    {
+      "start": 34.07,
+      "end": 36.558,
+      "text": "I would be your girl",
+      "words": [
+        {
+          "text": "I ",
+          "start": 34.108,
+          "end": 34.399
+        },
+        {
+          "text": "would ",
+          "start": 34.399,
+          "end": 35.007
+        },
+        {
+          "text": "be ",
+          "start": 35.007,
+          "end": 35.388
+        },
+        {
+          "text": "your ",
+          "start": 35.388,
+          "end": 35.857
+        },
+        {
+          "text": "girl",
+          "start": 35.857,
+          "end": 36.558
+        }
+      ]
+    },
+    {
+      "start": 37.52,
+      "end": 40.259,
+      "text": "We'd keep all our promises",
+      "words": [
+        {
+          "text": "We'd ",
+          "start": 37.582,
+          "end": 37.897
+        },
+        {
+          "text": "keep ",
+          "start": 37.897,
+          "end": 38.411
+        },
+        {
+          "text": "all ",
+          "start": 38.411,
+          "end": 38.79
+        },
+        {
+          "text": "our ",
+          "start": 38.79,
+          "end": 39.203
+        },
+        {
+          "text": "promises",
+          "start": 39.203,
+          "end": 40.259
+        }
+      ]
+    },
+    {
+      "start": 40.76,
+      "end": 43.546,
+      "text": "Be us against the world",
+      "words": [
+        {
+          "text": "Be ",
+          "start": 40.782,
+          "end": 40.95
+        },
+        {
+          "text": "us ",
+          "start": 40.95,
+          "end": 41.628
+        },
+        {
+          "text": "against ",
+          "start": 41.628,
+          "end": 42.543
+        },
+        {
+          "text": "the ",
+          "start": 42.543,
+          "end": 42.787
+        },
+        {
+          "text": "world",
+          "start": 42.787,
+          "end": 43.546
+        }
+      ]
+    },
+    {
+      "start": 44.8,
+      "end": 47.312,
+      "text": "In another life",
+      "words": [
+        {
+          "text": "In ",
+          "start": 44.872,
+          "end": 45.061
+        },
+        {
+          "text": "another ",
+          "start": 45.061,
+          "end": 46.491
+        },
+        {
+          "text": "life",
+          "start": 46.491,
+          "end": 47.312
+        }
+      ]
+    },
+    {
+      "start": 48.37,
+      "end": 50.784,
+      "text": "I would make you stay",
+      "words": [
+        {
+          "text": "I ",
+          "start": 48.432,
+          "end": 48.612
+        },
+        {
+          "text": "would ",
+          "start": 48.612,
+          "end": 49.204
+        },
+        {
+          "text": "make ",
+          "start": 49.204,
+          "end": 49.663
+        },
+        {
+          "text": "you ",
+          "start": 49.663,
+          "end": 50.07
+        },
+        {
+          "text": "stay",
+          "start": 50.07,
+          "end": 50.784
+        }
+      ]
+    },
+    {
+      "start": 51.73,
+      "end": 54.84,
+      "text": "So I don't have to say you were",
+      "words": [
+        {
+          "text": "So ",
+          "start": 51.767,
+          "end": 52.032
+        },
+        {
+          "text": "I ",
+          "start": 52.032,
+          "end": 52.169
+        },
+        {
+          "text": "don't ",
+          "start": 52.169,
+          "end": 52.777
+        },
+        {
+          "text": "have ",
+          "start": 52.777,
+          "end": 53.246
+        },
+        {
+          "text": "to ",
+          "start": 53.246,
+          "end": 53.603
+        },
+        {
+          "text": "say ",
+          "start": 53.603,
+          "end": 54.258
+        },
+        {
+          "text": "you ",
+          "start": 54.258,
+          "end": 54.484
+        },
+        {
+          "text": "were",
+          "start": 54.484,
+          "end": 54.84
+        }
+      ]
+    },
+    {
+      "start": 55.16,
+      "end": 57.719,
+      "text": "The one that got away",
+      "words": [
+        {
+          "text": "The ",
+          "start": 55.201,
+          "end": 55.408
+        },
+        {
+          "text": "one ",
+          "start": 55.408,
+          "end": 55.732
+        },
+        {
+          "text": "that ",
+          "start": 55.732,
+          "end": 56.219
+        },
+        {
+          "text": "got ",
+          "start": 56.219,
+          "end": 56.963
+        },
+        {
+          "text": "away",
+          "start": 56.963,
+          "end": 57.719
+        }
+      ]
+    },
+    {
+      "start": 59.06,
+      "end": 61.79,
+      "text": "The one that got away",
+      "words": [
+        {
+          "text": "The ",
+          "start": 59.106,
+          "end": 59.591
+        },
+        {
+          "text": "one ",
+          "start": 59.591,
+          "end": 59.989
+        },
+        {
+          "text": "that ",
+          "start": 59.989,
+          "end": 60.451
+        },
+        {
+          "text": "got ",
+          "start": 60.451,
+          "end": 60.873
+        },
+        {
+          "text": "away",
+          "start": 60.873,
+          "end": 61.79
+        }
+      ]
+    },
+    {
+      "start": 62.81,
+      "end": 65.924,
+      "text": "I was June, and you were my Johnny Cash",
+      "words": [
+        {
+          "text": "I ",
+          "start": 62.856,
+          "end": 62.958
+        },
+        {
+          "text": "was ",
+          "start": 62.958,
+          "end": 63.123
+        },
+        {
+          "text": "June, ",
+          "start": 63.123,
+          "end": 63.442
+        },
+        {
+          "text": "and ",
+          "start": 63.442,
+          "end": 63.908
+        },
+        {
+          "text": "you ",
+          "start": 63.908,
+          "end": 64.278
+        },
+        {
+          "text": "were ",
+          "start": 64.278,
+          "end": 64.625
+        },
+        {
+          "text": "my ",
+          "start": 64.625,
+          "end": 64.855
+        },
+        {
+          "text": "Johnny ",
+          "start": 64.855,
+          "end": 65.458
+        },
+        {
+          "text": "Cash",
+          "start": 65.458,
+          "end": 65.924
+        }
+      ]
+    },
+    {
+      "start": 66,
+      "end": 69.034,
+      "text": "Never one without the other, we made a pact",
+      "words": [
+        {
+          "text": "Never ",
+          "start": 66.065,
+          "end": 66.309
+        },
+        {
+          "text": "one ",
+          "start": 66.309,
+          "end": 66.492
+        },
+        {
+          "text": "without ",
+          "start": 66.492,
+          "end": 66.824
+        },
+        {
+          "text": "the ",
+          "start": 66.824,
+          "end": 67.001
+        },
+        {
+          "text": "other, ",
+          "start": 67.001,
+          "end": 67.771
+        },
+        {
+          "text": "we ",
+          "start": 67.771,
+          "end": 67.948
+        },
+        {
+          "text": "made ",
+          "start": 67.948,
+          "end": 68.316
+        },
+        {
+          "text": "a ",
+          "start": 68.316,
+          "end": 68.516
+        },
+        {
+          "text": "pact",
+          "start": 68.516,
+          "end": 69.034
+        }
+      ]
+    },
+    {
+      "start": 69.73,
+      "end": 75.356,
+      "text": "Sometimes when I miss you, I put those records on, whoa",
+      "words": [
+        {
+          "text": "Sometimes ",
+          "start": 69.742,
+          "end": 70.352
+        },
+        {
+          "text": "when ",
+          "start": 70.352,
+          "end": 70.604
+        },
+        {
+          "text": "I ",
+          "start": 70.604,
+          "end": 70.682
+        },
+        {
+          "text": "miss ",
+          "start": 70.682,
+          "end": 71.024
+        },
+        {
+          "text": "you, ",
+          "start": 71.024,
+          "end": 71.522
+        },
+        {
+          "text": "I ",
+          "start": 71.522,
+          "end": 71.614
+        },
+        {
+          "text": "put ",
+          "start": 71.614,
+          "end": 71.874
+        },
+        {
+          "text": "those ",
+          "start": 71.874,
+          "end": 72.459
+        },
+        {
+          "text": "records ",
+          "start": 72.459,
+          "end": 73.128
+        },
+        {
+          "text": "on, ",
+          "start": 73.128,
+          "end": 74.35
+        },
+        {
+          "text": "whoa",
+          "start": 74.35,
+          "end": 75.356
+        }
+      ]
+    },
+    {
+      "start": 77.02,
+      "end": 79.95,
+      "text": "Someone said you had your tattoo removed",
+      "words": [
+        {
+          "text": "Someone ",
+          "start": 77.084,
+          "end": 77.479
+        },
+        {
+          "text": "said ",
+          "start": 77.479,
+          "end": 77.721
+        },
+        {
+          "text": "you ",
+          "start": 77.721,
+          "end": 77.919
+        },
+        {
+          "text": "had ",
+          "start": 77.919,
+          "end": 78.162
+        },
+        {
+          "text": "your ",
+          "start": 78.162,
+          "end": 78.858
+        },
+        {
+          "text": "tattoo ",
+          "start": 78.858,
+          "end": 79.202
+        },
+        {
+          "text": "removed",
+          "start": 79.202,
+          "end": 79.95
+        }
+      ]
+    },
+    {
+      "start": 80.57,
+      "end": 83.637,
+      "text": "Saw you downtown singing the blues",
+      "words": [
+        {
+          "text": "Saw ",
+          "start": 80.62,
+          "end": 80.846
+        },
+        {
+          "text": "you ",
+          "start": 80.846,
+          "end": 81.048
+        },
+        {
+          "text": "downtown ",
+          "start": 81.048,
+          "end": 82.297
+        },
+        {
+          "text": "singing ",
+          "start": 82.297,
+          "end": 82.783
+        },
+        {
+          "text": "the ",
+          "start": 82.783,
+          "end": 83.038
+        },
+        {
+          "text": "blues",
+          "start": 83.038,
+          "end": 83.637
+        }
+      ]
+    },
+    {
+      "start": 84.02,
+      "end": 88.213,
+      "text": "It's time to face the music, I'm no longer your muse",
+      "words": [
+        {
+          "text": "It's ",
+          "start": 84.059,
+          "end": 84.188
+        },
+        {
+          "text": "time ",
+          "start": 84.188,
+          "end": 84.352
+        },
+        {
+          "text": "to ",
+          "start": 84.352,
+          "end": 84.467
+        },
+        {
+          "text": "face ",
+          "start": 84.467,
+          "end": 84.679
+        },
+        {
+          "text": "the ",
+          "start": 84.679,
+          "end": 84.893
+        },
+        {
+          "text": "music, ",
+          "start": 84.893,
+          "end": 85.729
+        },
+        {
+          "text": "I'm ",
+          "start": 85.729,
+          "end": 85.9
+        },
+        {
+          "text": "no ",
+          "start": 85.9,
+          "end": 86.388
+        },
+        {
+          "text": "longer ",
+          "start": 86.388,
+          "end": 87.189
+        },
+        {
+          "text": "your ",
+          "start": 87.189,
+          "end": 87.486
+        },
+        {
+          "text": "muse",
+          "start": 87.486,
+          "end": 88.213
+        }
+      ]
+    },
+    {
+      "start": 89.53,
+      "end": 92.265,
+      "text": "But in another life",
+      "words": [
+        {
+          "text": "But ",
+          "start": 89.591,
+          "end": 89.812
+        },
+        {
+          "text": "in ",
+          "start": 89.812,
+          "end": 89.996
+        },
+        {
+          "text": "another ",
+          "start": 89.996,
+          "end": 91.347
+        },
+        {
+          "text": "life",
+          "start": 91.347,
+          "end": 92.265
+        }
+      ]
+    },
+    {
+      "start": 93.14,
+      "end": 95.649,
+      "text": "I would be your girl",
+      "words": [
+        {
+          "text": "I ",
+          "start": 93.166,
+          "end": 93.315
+        },
+        {
+          "text": "would ",
+          "start": 93.315,
+          "end": 93.981
+        },
+        {
+          "text": "be ",
+          "start": 93.981,
+          "end": 94.391
+        },
+        {
+          "text": "your ",
+          "start": 94.391,
+          "end": 94.878
+        },
+        {
+          "text": "girl",
+          "start": 94.878,
+          "end": 95.649
+        }
+      ]
+    },
+    {
+      "start": 96.73,
+      "end": 99.455,
+      "text": "We'd keep all our promises",
+      "words": [
+        {
+          "text": "We'd ",
+          "start": 96.776,
+          "end": 97.081
+        },
+        {
+          "text": "keep ",
+          "start": 97.081,
+          "end": 97.652
+        },
+        {
+          "text": "all ",
+          "start": 97.652,
+          "end": 97.879
+        },
+        {
+          "text": "our ",
+          "start": 97.879,
+          "end": 98.223
+        },
+        {
+          "text": "promises",
+          "start": 98.223,
+          "end": 99.455
+        }
+      ]
+    },
+    {
+      "start": 99.99,
+      "end": 102.985,
+      "text": "Be us against the world",
+      "words": [
+        {
+          "text": "Be ",
+          "start": 100.044,
+          "end": 100.364
+        },
+        {
+          "text": "us ",
+          "start": 100.364,
+          "end": 100.996
+        },
+        {
+          "text": "against ",
+          "start": 100.996,
+          "end": 101.922
+        },
+        {
+          "text": "the ",
+          "start": 101.922,
+          "end": 102.191
+        },
+        {
+          "text": "world",
+          "start": 102.191,
+          "end": 102.985
+        }
+      ]
+    },
+    {
+      "start": 103.99,
+      "end": 106.484,
+      "text": "In another life",
+      "words": [
+        {
+          "text": "In ",
+          "start": 104.048,
+          "end": 104.248
+        },
+        {
+          "text": "another ",
+          "start": 104.248,
+          "end": 105.674
+        },
+        {
+          "text": "life",
+          "start": 105.674,
+          "end": 106.484
+        }
+      ]
+    },
+    {
+      "start": 107.49,
+      "end": 110.206,
+      "text": "I would make you stay",
+      "words": [
+        {
+          "text": "I ",
+          "start": 107.574,
+          "end": 107.811
+        },
+        {
+          "text": "would ",
+          "start": 107.811,
+          "end": 108.457
+        },
+        {
+          "text": "make ",
+          "start": 108.457,
+          "end": 109.007
+        },
+        {
+          "text": "you ",
+          "start": 109.007,
+          "end": 109.472
+        },
+        {
+          "text": "stay",
+          "start": 109.472,
+          "end": 110.206
+        }
+      ]
+    },
+    {
+      "start": 110.86,
+      "end": 113.991,
+      "text": "So I don't have to say you were",
+      "words": [
+        {
+          "text": "So ",
+          "start": 110.913,
+          "end": 111.188
+        },
+        {
+          "text": "I ",
+          "start": 111.188,
+          "end": 111.308
+        },
+        {
+          "text": "don't ",
+          "start": 111.308,
+          "end": 111.721
+        },
+        {
+          "text": "have ",
+          "start": 111.721,
+          "end": 112.285
+        },
+        {
+          "text": "to ",
+          "start": 112.285,
+          "end": 112.588
+        },
+        {
+          "text": "say ",
+          "start": 112.588,
+          "end": 113.069
+        },
+        {
+          "text": "you ",
+          "start": 113.069,
+          "end": 113.433
+        },
+        {
+          "text": "were",
+          "start": 113.433,
+          "end": 113.991
+        }
+      ]
+    },
+    {
+      "start": 114.26,
+      "end": 116.89,
+      "text": "The one that got away",
+      "words": [
+        {
+          "text": "The ",
+          "start": 114.309,
+          "end": 114.513
+        },
+        {
+          "text": "one ",
+          "start": 114.513,
+          "end": 115.073
+        },
+        {
+          "text": "that ",
+          "start": 115.073,
+          "end": 115.365
+        },
+        {
+          "text": "got ",
+          "start": 115.365,
+          "end": 116.073
+        },
+        {
+          "text": "away",
+          "start": 116.073,
+          "end": 116.89
+        }
+      ]
+    },
+    {
+      "start": 118.03,
+      "end": 120.412,
+      "text": "The one that got away",
+      "words": [
+        {
+          "text": "The ",
+          "start": 118.059,
+          "end": 118.363
+        },
+        {
+          "text": "one ",
+          "start": 118.363,
+          "end": 118.886
+        },
+        {
+          "text": "that ",
+          "start": 118.886,
+          "end": 119.371
+        },
+        {
+          "text": "got ",
+          "start": 119.371,
+          "end": 119.701
+        },
+        {
+          "text": "away",
+          "start": 119.701,
+          "end": 120.412
+        }
+      ]
+    },
+    {
+      "start": 121.64,
+      "end": 123.935,
+      "text": "The one",
+      "words": [
+        {
+          "text": "The ",
+          "start": 121.7,
+          "end": 122.423
+        },
+        {
+          "text": "one",
+          "start": 122.423,
+          "end": 123.935
+        }
+      ]
+    },
+    {
+      "start": 125.34,
+      "end": 127.388,
+      "text": "The one",
+      "words": [
+        {
+          "text": "The ",
+          "start": 125.379,
+          "end": 125.735
+        },
+        {
+          "text": "one",
+          "start": 125.735,
+          "end": 127.388
+        }
+      ]
+    },
+    {
+      "start": 128.82,
+      "end": 130.632,
+      "text": "The one",
+      "words": [
+        {
+          "text": "The ",
+          "start": 128.891,
+          "end": 129.301
+        },
+        {
+          "text": "one",
+          "start": 129.301,
+          "end": 130.632
+        }
+      ]
+    },
+    {
+      "start": 132.47,
+      "end": 134.618,
+      "text": "The one that got away",
+      "words": [
+        {
+          "text": "The ",
+          "start": 132.532,
+          "end": 132.747
+        },
+        {
+          "text": "one ",
+          "start": 132.747,
+          "end": 133.122
+        },
+        {
+          "text": "that ",
+          "start": 133.122,
+          "end": 133.522
+        },
+        {
+          "text": "got ",
+          "start": 133.522,
+          "end": 133.868
+        },
+        {
+          "text": "away",
+          "start": 133.868,
+          "end": 134.618
+        }
+      ]
+    },
+    {
+      "start": 135.78,
+      "end": 141.767,
+      "text": "All this money can't buy me a time machine, no",
+      "words": [
+        {
+          "text": "All ",
+          "start": 135.841,
+          "end": 136.033
+        },
+        {
+          "text": "this ",
+          "start": 136.033,
+          "end": 136.227
+        },
+        {
+          "text": "money ",
+          "start": 136.227,
+          "end": 136.604
+        },
+        {
+          "text": "can't ",
+          "start": 136.604,
+          "end": 137.122
+        },
+        {
+          "text": "buy ",
+          "start": 137.122,
+          "end": 137.486
+        },
+        {
+          "text": "me ",
+          "start": 137.486,
+          "end": 137.866
+        },
+        {
+          "text": "a ",
+          "start": 137.866,
+          "end": 138.06
+        },
+        {
+          "text": "time ",
+          "start": 138.06,
+          "end": 138.723
+        },
+        {
+          "text": "machine, ",
+          "start": 138.723,
+          "end": 140.99
+        },
+        {
+          "text": "no",
+          "start": 140.99,
+          "end": 141.767
+        }
+      ]
+    },
+    {
+      "start": 143.4,
+      "end": 149.139,
+      "text": "Can't replace you with a million rings, no",
+      "words": [
+        {
+          "text": "Can't ",
+          "start": 143.438,
+          "end": 143.745
+        },
+        {
+          "text": "replace ",
+          "start": 143.745,
+          "end": 144.172
+        },
+        {
+          "text": "you ",
+          "start": 144.172,
+          "end": 144.44
+        },
+        {
+          "text": "with ",
+          "start": 144.44,
+          "end": 144.856
+        },
+        {
+          "text": "a ",
+          "start": 144.856,
+          "end": 145.211
+        },
+        {
+          "text": "million ",
+          "start": 145.211,
+          "end": 146.602
+        },
+        {
+          "text": "rings, ",
+          "start": 146.602,
+          "end": 147.974
+        },
+        {
+          "text": "no",
+          "start": 147.974,
+          "end": 149.139
+        }
+      ]
+    },
+    {
+      "start": 150.34,
+      "end": 156.08,
+      "text": "I should've told you what you meant to me, whoa",
+      "words": [
+        {
+          "text": "I ",
+          "start": 150.363,
+          "end": 150.463
+        },
+        {
+          "text": "should've ",
+          "start": 150.463,
+          "end": 151.094
+        },
+        {
+          "text": "told ",
+          "start": 151.094,
+          "end": 151.392
+        },
+        {
+          "text": "you ",
+          "start": 151.392,
+          "end": 151.727
+        },
+        {
+          "text": "what ",
+          "start": 151.727,
+          "end": 152.062
+        },
+        {
+          "text": "you ",
+          "start": 152.062,
+          "end": 152.324
+        },
+        {
+          "text": "meant ",
+          "start": 152.324,
+          "end": 152.962
+        },
+        {
+          "text": "to ",
+          "start": 152.962,
+          "end": 153.499
+        },
+        {
+          "text": "me, ",
+          "start": 153.499,
+          "end": 154.825
+        },
+        {
+          "text": "whoa",
+          "start": 154.825,
+          "end": 156.08
+        }
+      ]
+    },
+    {
+      "start": 157.4,
+      "end": 160.344,
+      "text": "'Cause now I pay the price",
+      "words": [
+        {
+          "text": "'Cause ",
+          "start": 157.472,
+          "end": 157.842
+        },
+        {
+          "text": "now ",
+          "start": 157.842,
+          "end": 158.2
+        },
+        {
+          "text": "I ",
+          "start": 158.2,
+          "end": 158.347
+        },
+        {
+          "text": "pay ",
+          "start": 158.347,
+          "end": 158.965
+        },
+        {
+          "text": "the ",
+          "start": 158.965,
+          "end": 159.437
+        },
+        {
+          "text": "price",
+          "start": 159.437,
+          "end": 160.344
+        }
+      ]
+    },
+    {
+      "start": 161.27,
+      "end": 163.731,
+      "text": "In another life",
+      "words": [
+        {
+          "text": "In ",
+          "start": 161.3,
+          "end": 161.549
+        },
+        {
+          "text": "another ",
+          "start": 161.549,
+          "end": 162.88
+        },
+        {
+          "text": "life",
+          "start": 162.88,
+          "end": 163.731
+        }
+      ]
+    },
+    {
+      "start": 164.76,
+      "end": 167.273,
+      "text": "I would be your girl",
+      "words": [
+        {
+          "text": "I ",
+          "start": 164.833,
+          "end": 165.064
+        },
+        {
+          "text": "would ",
+          "start": 165.064,
+          "end": 165.707
+        },
+        {
+          "text": "be ",
+          "start": 165.707,
+          "end": 165.952
+        },
+        {
+          "text": "your ",
+          "start": 165.952,
+          "end": 166.4
+        },
+        {
+          "text": "girl",
+          "start": 166.4,
+          "end": 167.273
+        }
+      ]
+    },
+    {
+      "start": 168.37,
+      "end": 171.407,
+      "text": "We'd keep all our promises",
+      "words": [
+        {
+          "text": "We'd ",
+          "start": 168.4,
+          "end": 168.926
+        },
+        {
+          "text": "keep ",
+          "start": 168.926,
+          "end": 169.32
+        },
+        {
+          "text": "all ",
+          "start": 169.32,
+          "end": 169.631
+        },
+        {
+          "text": "our ",
+          "start": 169.631,
+          "end": 169.972
+        },
+        {
+          "text": "promises",
+          "start": 169.972,
+          "end": 171.407
+        }
+      ]
+    },
+    {
+      "start": 171.57,
+      "end": 174.362,
+      "text": "Be us against the world",
+      "words": [
+        {
+          "text": "Be ",
+          "start": 171.582,
+          "end": 171.772
+        },
+        {
+          "text": "us ",
+          "start": 171.772,
+          "end": 172.367
+        },
+        {
+          "text": "against ",
+          "start": 172.367,
+          "end": 173.255
+        },
+        {
+          "text": "the ",
+          "start": 173.255,
+          "end": 173.56
+        },
+        {
+          "text": "world",
+          "start": 173.56,
+          "end": 174.362
+        }
+      ]
+    },
+    {
+      "start": 175.53,
+      "end": 178.226,
+      "text": "In another life",
+      "words": [
+        {
+          "text": "In ",
+          "start": 175.542,
+          "end": 175.833
+        },
+        {
+          "text": "another ",
+          "start": 175.833,
+          "end": 177.314
+        },
+        {
+          "text": "life",
+          "start": 177.314,
+          "end": 178.226
+        }
+      ]
+    },
+    {
+      "start": 179.1,
+      "end": 181.555,
+      "text": "I would make you stay",
+      "words": [
+        {
+          "text": "I ",
+          "start": 179.152,
+          "end": 179.351
+        },
+        {
+          "text": "would ",
+          "start": 179.351,
+          "end": 180.067
+        },
+        {
+          "text": "make ",
+          "start": 180.067,
+          "end": 180.563
+        },
+        {
+          "text": "you ",
+          "start": 180.563,
+          "end": 180.943
+        },
+        {
+          "text": "stay",
+          "start": 180.943,
+          "end": 181.555
+        }
+      ]
+    },
+    {
+      "start": 182.53,
+      "end": 185.729,
+      "text": "So I don't have to say you were",
+      "words": [
+        {
+          "text": "So ",
+          "start": 182.598,
+          "end": 182.8
+        },
+        {
+          "text": "I ",
+          "start": 182.8,
+          "end": 182.88
+        },
+        {
+          "text": "don't ",
+          "start": 182.88,
+          "end": 183.249
+        },
+        {
+          "text": "have ",
+          "start": 183.249,
+          "end": 183.88
+        },
+        {
+          "text": "to ",
+          "start": 183.88,
+          "end": 184.244
+        },
+        {
+          "text": "say ",
+          "start": 184.244,
+          "end": 185.024
+        },
+        {
+          "text": "you ",
+          "start": 185.024,
+          "end": 185.339
+        },
+        {
+          "text": "were",
+          "start": 185.339,
+          "end": 185.729
+        }
+      ]
+    },
+    {
+      "start": 185.8,
+      "end": 188.342,
+      "text": "The one that got away",
+      "words": [
+        {
+          "text": "The ",
+          "start": 185.845,
+          "end": 186.058
+        },
+        {
+          "text": "one ",
+          "start": 186.058,
+          "end": 186.327
+        },
+        {
+          "text": "that ",
+          "start": 186.327,
+          "end": 186.847
+        },
+        {
+          "text": "got ",
+          "start": 186.847,
+          "end": 187.453
+        },
+        {
+          "text": "away",
+          "start": 187.453,
+          "end": 188.342
+        }
+      ]
+    },
+    {
+      "start": 189.72,
+      "end": 192.826,
+      "text": "The one that got away",
+      "words": [
+        {
+          "text": "The ",
+          "start": 189.758,
+          "end": 189.974
+        },
+        {
+          "text": "one ",
+          "start": 189.974,
+          "end": 190.445
+        },
+        {
+          "text": "that ",
+          "start": 190.445,
+          "end": 190.964
+        },
+        {
+          "text": "got ",
+          "start": 190.964,
+          "end": 191.466
+        },
+        {
+          "text": "away",
+          "start": 191.466,
+          "end": 192.826
+        }
+      ]
+    },
+    {
+      "start": 193.33,
+      "end": 196,
+      "text": "The one (the one)",
+      "words": [
+        {
+          "text": "The ",
+          "start": 193.384,
+          "end": 193.989
+        },
+        {
+          "text": "one ",
+          "start": 193.989,
+          "end": 195.069
+        },
+        {
+          "text": "(the ",
+          "start": 195.069,
+          "end": 195.193
+        },
+        {
+          "text": "one)",
+          "start": 195.193,
+          "end": 196
+        }
+      ]
+    },
+    {
+      "start": 196.94,
+      "end": 199.815,
+      "text": "The one (the one)",
+      "words": [
+        {
+          "text": "The ",
+          "start": 196.979,
+          "end": 197.31
+        },
+        {
+          "text": "one ",
+          "start": 197.31,
+          "end": 198.835
+        },
+        {
+          "text": "(the ",
+          "start": 198.835,
+          "end": 199.135
+        },
+        {
+          "text": "one)",
+          "start": 199.135,
+          "end": 199.815
+        }
+      ]
+    },
+    {
+      "start": 200.54,
+      "end": 203.535,
+      "text": "The one (the one)",
+      "words": [
+        {
+          "text": "The ",
+          "start": 200.581,
+          "end": 201.012
+        },
+        {
+          "text": "one ",
+          "start": 201.012,
+          "end": 201.996
+        },
+        {
+          "text": "(the ",
+          "start": 201.996,
+          "end": 202.708
+        },
+        {
+          "text": "one)",
+          "start": 202.708,
+          "end": 203.535
+        }
+      ]
+    },
+    {
+      "start": 204.21,
+      "end": 206.745,
+      "text": "In another life",
+      "words": [
+        {
+          "text": "In ",
+          "start": 204.271,
+          "end": 204.538
+        },
+        {
+          "text": "another ",
+          "start": 204.538,
+          "end": 205.937
+        },
+        {
+          "text": "life",
+          "start": 205.937,
+          "end": 206.745
+        }
+      ]
+    },
+    {
+      "start": 207.96,
+      "end": 210.388,
+      "text": "I would make you stay",
+      "words": [
+        {
+          "text": "I ",
+          "start": 207.994,
+          "end": 208.147
+        },
+        {
+          "text": "would ",
+          "start": 208.147,
+          "end": 208.754
+        },
+        {
+          "text": "make ",
+          "start": 208.754,
+          "end": 209.315
+        },
+        {
+          "text": "you ",
+          "start": 209.315,
+          "end": 209.673
+        },
+        {
+          "text": "stay",
+          "start": 209.673,
+          "end": 210.388
+        }
+      ]
+    },
+    {
+      "start": 211.18,
+      "end": 214.46,
+      "text": "So I don't have to say you were",
+      "words": [
+        {
+          "text": "So ",
+          "start": 211.235,
+          "end": 211.502
+        },
+        {
+          "text": "I ",
+          "start": 211.502,
+          "end": 211.637
+        },
+        {
+          "text": "don't ",
+          "start": 211.637,
+          "end": 212.11
+        },
+        {
+          "text": "have ",
+          "start": 212.11,
+          "end": 212.648
+        },
+        {
+          "text": "to ",
+          "start": 212.648,
+          "end": 212.916
+        },
+        {
+          "text": "say ",
+          "start": 212.916,
+          "end": 213.544
+        },
+        {
+          "text": "you ",
+          "start": 213.544,
+          "end": 214.136
+        },
+        {
+          "text": "were",
+          "start": 214.136,
+          "end": 214.46
+        }
+      ]
+    },
+    {
+      "start": 214.46,
+      "end": 216.863,
+      "text": "The one that got away",
+      "words": [
+        {
+          "text": "The ",
+          "start": 214.499,
+          "end": 214.76
+        },
+        {
+          "text": "one ",
+          "start": 214.76,
+          "end": 215.135
+        },
+        {
+          "text": "that ",
+          "start": 215.135,
+          "end": 215.485
+        },
+        {
+          "text": "got ",
+          "start": 215.485,
+          "end": 216.034
+        },
+        {
+          "text": "away",
+          "start": 216.034,
+          "end": 216.863
+        }
+      ]
+    },
+    {
+      "start": 218.39,
+      "end": 220.793,
+      "text": "The one that got away",
+      "words": [
+        {
+          "text": "The ",
+          "start": 218.439,
+          "end": 218.777
+        },
+        {
+          "text": "one ",
+          "start": 218.777,
+          "end": 219.166
+        },
+        {
+          "text": "that ",
+          "start": 219.166,
+          "end": 219.529
+        },
+        {
+          "text": "got ",
+          "start": 219.529,
+          "end": 219.927
+        },
+        {
+          "text": "away",
+          "start": 219.927,
+          "end": 220.793
+        }
+      ]
+    }
+  ]
+}

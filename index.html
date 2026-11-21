@@ -155,11 +155,70 @@
 
         .music-player {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             min-width: 0;
             flex: 1 1 100%;
             justify-content: center;
+        }
+
+        .music-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 0;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .music-cover {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            flex: 0 0 auto;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .music-cover.hidden {
+            display: none;
+        }
+
+        .music-lyrics {
+            width: 100%;
+            max-height: 72px;
+            overflow: hidden;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.72);
+            padding: 0 4px;
+        }
+
+        .music-lyrics:empty {
+            display: none;
+        }
+
+        .lyric-line {
+            padding: 1px 0;
+            transition: color 0.15s ease, opacity 0.15s ease;
+            opacity: 0.55;
+        }
+
+        .lyric-line.active {
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        .lyric-word {
+            transition: color 0.08s ease, text-shadow 0.08s ease;
+        }
+
+        .lyric-word.active {
+            color: #00CED1;
+            text-shadow: 0 0 8px rgba(0, 206, 209, 0.45);
         }
 
         .music-btn {
@@ -640,8 +699,18 @@
             }
 
             .music-title {
-                max-width: 68vw;
+                max-width: 52vw;
                 font-size: 11px;
+            }
+
+            .music-cover {
+                width: 30px;
+                height: 30px;
+            }
+
+            .music-lyrics {
+                font-size: 11px;
+                max-height: 60px;
             }
 
             .volume-control, .transparency-control {
@@ -747,16 +816,20 @@
 
         <div class="top-controls">
             <div id="music-player" class="music-player hidden">
-                <button id="music-prev" class="music-btn" type="button" aria-label="Previous track">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
-                </button>
-                <button id="music-toggle" class="music-btn" type="button" aria-label="Play or pause">
-                    <svg id="music-toggle-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                </button>
-                <button id="music-next" class="music-btn" type="button" aria-label="Next track">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
-                </button>
-                <span id="music-title" class="music-title">No track</span>
+                <div class="music-row">
+                    <img id="music-cover" class="music-cover hidden" alt="Cover art">
+                    <button id="music-prev" class="music-btn" type="button" aria-label="Previous track">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+                    </button>
+                    <button id="music-toggle" class="music-btn" type="button" aria-label="Play or pause">
+                        <svg id="music-toggle-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </button>
+                    <button id="music-next" class="music-btn" type="button" aria-label="Next track">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                    </button>
+                    <span id="music-title" class="music-title">No track</span>
+                </div>
+                <div id="music-lyrics" class="music-lyrics" aria-live="polite"></div>
             </div>
             <div class="volume-control">
                 <svg id="volume-icon" class="volume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -783,8 +856,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 
-    <script src="config.js?v=4"></script>
-    <script src="script.js?v=8"></script>
+    <script src="config.js?v=5"></script>
+    <script src="script.js?v=9"></script>
     <script src="discord-status.js?v=2"></script>
 </body>
 </html>
