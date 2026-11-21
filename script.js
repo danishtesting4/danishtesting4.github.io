@@ -196,6 +196,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function updateMusicUI() {
+    if (!musicPlayer) return;
+    if (!musicTracks.length) {
+      musicPlayer.classList.add('hidden');
+      return;
+    }
+    musicPlayer.classList.remove('hidden');
+    const track = musicTracks[currentTrackIndex];
+    if (musicTitle) {
+      musicTitle.textContent = formatTrackLabel(track);
+      musicTitle.title = musicTitle.textContent;
+    }
+    updateTrackCover(track);
+    setMusicToggleIcon(backgroundMusic && !backgroundMusic.paused && !backgroundMusic.ended);
+  }
+
   function loadTrack(index, autoplay = false) {
     if (!musicTracks.length || !backgroundMusic) return;
     currentTrackIndex = ((index % musicTracks.length) + musicTracks.length) % musicTracks.length;
