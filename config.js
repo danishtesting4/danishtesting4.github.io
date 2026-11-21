@@ -70,15 +70,13 @@ const SITE_CONFIG = {
         title: "The One That Got Away",
         artist: "Katy Perry",
         src: "assets/Katy Perry - The One That Got Away (Official Music Video).mp3",
-        cover: "assets/the-one-that-got-away-cover.png",
-        lyrics: "assets/the-one-that-got-away.lyrics.json"
+        cover: "assets/the-one-that-got-away-cover.png"
       },
       {
         title: "Just The Way You Are",
         artist: "Milky",
         src: "assets/Milky - Just The Way You Are.mp3",
-        cover: "assets/just-the-way-you-are-cover.jpg",
-        lyrics: "assets/just-the-way-you-are.lrc"
+        cover: "assets/just-the-way-you-are-cover.jpg"
       }
     ]
   }
