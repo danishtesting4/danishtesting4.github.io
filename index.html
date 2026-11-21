@@ -142,12 +142,57 @@
             transform: translateX(-50%);
             display: flex;
             align-items: center;
-            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px 15px;
             z-index: 20;
             background: rgba(0, 0, 0, 0.7);
             padding: 8px 12px;
             border-radius: 20px;
             backdrop-filter: blur(5px);
+            max-width: min(92vw, 760px);
+        }
+
+        .music-player {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 0;
+            flex: 1 1 100%;
+            justify-content: center;
+        }
+
+        .music-btn {
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            padding: 0;
+            flex: 0 0 auto;
+        }
+
+        .music-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .music-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .music-title {
+            font-size: 12px;
+            color: #fff;
+            opacity: 0.95;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: min(56vw, 420px);
         }
 
         
@@ -590,8 +635,13 @@
             
             .top-controls {
                 bottom: 20px;
-                gap: 10px;
+                gap: 8px 10px;
                 padding: 6px 10px;
+            }
+
+            .music-title {
+                max-width: 68vw;
+                font-size: 11px;
             }
 
             .volume-control, .transparency-control {
@@ -696,6 +746,18 @@
 
 
         <div class="top-controls">
+            <div id="music-player" class="music-player hidden">
+                <button id="music-prev" class="music-btn" type="button" aria-label="Previous track">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+                </button>
+                <button id="music-toggle" class="music-btn" type="button" aria-label="Play or pause">
+                    <svg id="music-toggle-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <button id="music-next" class="music-btn" type="button" aria-label="Next track">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                </button>
+                <span id="music-title" class="music-title">No track</span>
+            </div>
             <div class="volume-control">
                 <svg id="volume-icon" class="volume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
@@ -713,7 +775,7 @@
     </div>
 
 
-    <audio id="background-music" loop>
+    <audio id="background-music">
         <source type="audio/mp3">
     </audio>
 
@@ -721,8 +783,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 
-    <script src="config.js?v=3"></script>
-    <script src="script.js?v=7"></script>
+    <script src="config.js?v=4"></script>
+    <script src="script.js?v=8"></script>
     <script src="discord-status.js?v=2"></script>
 </body>
 </html>

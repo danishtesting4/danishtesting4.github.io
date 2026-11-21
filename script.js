@@ -110,6 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const profileContainer = document.querySelector('.profile-container');
   const badgeGroup = document.getElementById('badge-group');
   const socialLinks = document.getElementById('social-links');
+  const musicPlayer = document.getElementById('music-player');
+  const musicPrev = document.getElementById('music-prev');
+  const musicToggle = document.getElementById('music-toggle');
+  const musicToggleIcon = document.getElementById('music-toggle-icon');
+  const musicNext = document.getElementById('music-next');
+  const musicTitle = document.getElementById('music-title');
 
   function renderBadges() {
     badgeGroup.innerHTML = config.badges.map(badge => `
@@ -137,6 +143,104 @@ document.addEventListener('DOMContentLoaded', () => {
     }, true);
   }
 
+  let musicTracks = [];
+  let currentTrackIndex = 0;
+  let playbackStarted = false;
+
+  function getConfiguredTracks() {
+    const media = config.media || {};
+    if (Array.isArray(media.tracks)) {
+      return media.tracks
+        .filter(track => track && track.src)
+        .map(track => ({
+          title: track.title || 'Untitled track',
+          artist: track.artist || '',
+          src: track.src
+        }));
+    }
+    if (media.backgroundMusic) {
+      return [{ title: 'Background music', artist: '', src: media.backgroundMusic }];
+    }
+    return [];
+  }
+
+  function formatTrackLabel(track) {
+    if (!track) return 'No track';
+    return track.artist ? `${track.artist} - ${track.title}` : track.title;
+  }
+
+  function setMusicToggleIcon(playing) {
+    if (!musicToggleIcon) return;
+    musicToggleIcon.innerHTML = playing
+      ? '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>'
+      : '<path d="M8 5v14l11-7z"/>';
+    if (musicToggle) {
+      musicToggle.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+    }
+  }
+
+  function updateMusicUI() {
+    if (!musicPlayer) return;
+    if (!musicTracks.length) {
+      musicPlayer.classList.add('hidden');
+      return;
+    }
+    musicPlayer.classList.remove('hidden');
+    if (musicTitle) {
+      musicTitle.textContent = formatTrackLabel(musicTracks[currentTrackIndex]);
+      musicTitle.title = musicTitle.textContent;
+    }
+    setMusicToggleIcon(backgroundMusic && !backgroundMusic.paused && !backgroundMusic.ended);
+  }
+
+  function loadTrack(index, autoplay = false) {
+    if (!musicTracks.length || !backgroundMusic) return;
+    currentTrackIndex = ((index % musicTracks.length) + musicTracks.length) % musicTracks.length;
+    const track = musicTracks[currentTrackIndex];
+    backgroundMusic.src = track.src;
+    backgroundMusic.load();
+    updateMusicUI();
+    if (autoplay) {
+      const playPromise = backgroundMusic.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(err => {
+          console.error('Failed to play track:', err);
+          setMusicToggleIcon(false);
+        });
+      }
+    }
+  }
+
+  function playCurrentTrack() {
+    if (!musicTracks.length || !backgroundMusic) return;
+    const playPromise = backgroundMusic.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(err => {
+        console.error('Failed to play track:', err);
+        setMusicToggleIcon(false);
+      });
+    }
+  }
+
+  function toggleTrackPlayback() {
+    if (!musicTracks.length || !backgroundMusic) return;
+    if (backgroundMusic.paused || backgroundMusic.ended) {
+      playCurrentTrack();
+    } else {
+      backgroundMusic.pause();
+    }
+  }
+
+  function nextTrack(autoplay = true) {
+    if (!musicTracks.length) return;
+    loadTrack(currentTrackIndex + 1, autoplay);
+  }
+
+  function prevTrack(autoplay = true) {
+    if (!musicTracks.length) return;
+    loadTrack(currentTrackIndex - 1, autoplay);
+  }
+
   function syncMediaSources() {
     const media = config.media || {};
 
@@ -146,14 +250,15 @@ document.addEventListener('DOMContentLoaded', () => {
       backgroundVideo.load();
     }
 
-    const musicSource = backgroundMusic && backgroundMusic.querySelector('source');
-    if (musicSource) {
-      if (media.backgroundMusic) {
-        musicSource.src = media.backgroundMusic;
-      } else {
-        musicSource.removeAttribute('src');
+    musicTracks = getConfiguredTracks();
+    if (musicTracks.length) {
+      loadTrack(0, false);
+    } else if (musicPlayer) {
+      musicPlayer.classList.add('hidden');
+      if (backgroundMusic) {
+        backgroundMusic.removeAttribute('src');
+        backgroundMusic.load();
       }
-      backgroundMusic.load();
     }
   }
 
@@ -256,45 +361,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  startScreen.addEventListener('click', () => {
-    startScreen.classList.add('hidden');
-    if (config.media && config.media.backgroundMusic) {
-      backgroundMusic.muted = false;
-      backgroundMusic.play().catch(err => {
-        console.error("Failed to play music after start screen click:", err);
-      });
+  function enterSite() {
+    if (!startScreen.classList.contains('hidden')) {
+      startScreen.classList.add('hidden');
+      profileBlock.classList.remove('hidden');
+      gsap.fromTo(profileBlock,
+        { opacity: 0, y: -50 },
+        { opacity: 1, y: 0, duration: 1, ease: 'power2.out', onComplete: () => {
+          profileBlock.classList.add('profile-appear');
+          profileContainer.classList.add('orbit');
+        }}
+      );
+      typeWriterName();
+      typeWriterBio();
     }
-    profileBlock.classList.remove('hidden');
-    gsap.fromTo(profileBlock,
-      { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power2.out', onComplete: () => {
-        profileBlock.classList.add('profile-appear');
-        profileContainer.classList.add('orbit');
-      }}
-    );
-    typeWriterName();
-    typeWriterBio();
+
+    if (musicTracks.length && backgroundMusic) {
+      playbackStarted = true;
+      backgroundMusic.muted = isMuted;
+      playCurrentTrack();
+    }
+  }
+
+  startScreen.addEventListener('click', () => {
+    enterSite();
   });
 
   startScreen.addEventListener('touchstart', (e) => {
     e.preventDefault();
-    startScreen.classList.add('hidden');
-    if (config.media && config.media.backgroundMusic) {
-      backgroundMusic.muted = false;
-      backgroundMusic.play().catch(err => {
-        console.error("Failed to play music after start screen touch:", err);
-      });
-    }
-    profileBlock.classList.remove('hidden');
-    gsap.fromTo(profileBlock,
-      { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power2.out', onComplete: () => {
-        profileBlock.classList.add('profile-appear');
-        profileContainer.classList.add('orbit');
-      }}
-    );
-    typeWriterName();
-    typeWriterBio();
+    enterSite();
   });
 
 
@@ -368,6 +463,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 500);
 
 
+  if (backgroundMusic && volumeSlider) {
+    backgroundMusic.volume = parseFloat(volumeSlider.value || '0.3');
+  }
+
   let currentAudio = backgroundMusic;
   let isMuted = false;
 
@@ -394,6 +493,21 @@ document.addEventListener('DOMContentLoaded', () => {
     currentAudio.muted = false;
     volumeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>`;
   });
+
+  if (musicToggle) {
+    musicToggle.addEventListener('click', toggleTrackPlayback);
+  }
+  if (musicNext) {
+    musicNext.addEventListener('click', () => nextTrack(true));
+  }
+  if (musicPrev) {
+    musicPrev.addEventListener('click', () => prevTrack(true));
+  }
+  if (backgroundMusic) {
+    backgroundMusic.addEventListener('ended', () => nextTrack(true));
+    backgroundMusic.addEventListener('play', () => setMusicToggleIcon(true));
+    backgroundMusic.addEventListener('pause', () => setMusicToggleIcon(false));
+  }
 
 
   transparencySlider.addEventListener('input', () => {

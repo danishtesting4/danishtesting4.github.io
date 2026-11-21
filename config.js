@@ -62,9 +62,20 @@ const SITE_CONFIG = {
     accentColor: "#00CED1"
   },
 
-  // Background media. Music is optional — leave it empty for no music.
+  // Background media. Add tracks to enable the music player.
   media: {
     backgroundVideo: "assets/background.mp4",
-    backgroundMusic: ""
+    tracks: [
+      {
+        title: "The One That Got Away",
+        artist: "Katy Perry",
+        src: "assets/Katy Perry - The One That Got Away (Official Music Video).mp3"
+      },
+      {
+        title: "Just The Way You Are",
+        artist: "Milky",
+        src: "assets/Milky - Just The Way You Are.mp3"
+      }
+    ]
   }
 };
