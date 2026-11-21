@@ -387,8 +387,8 @@ document.addEventListener('DOMContentLoaded', () => {
       startScreen.classList.add('hidden');
       profileBlock.classList.remove('hidden');
       gsap.fromTo(profileBlock,
-        { opacity: 0, y: -50 },
-        { opacity: 1, y: 0, duration: 1, ease: 'power2.out', onComplete: () => {
+        { opacity: 0, y: -50, xPercent: -50, yPercent: -50 },
+        { opacity: 1, y: 0, xPercent: -50, yPercent: -50, duration: 1, ease: 'power2.out', onComplete: () => {
           profileBlock.classList.add('profile-appear');
           profileContainer.classList.add('orbit');
         }}
