@@ -187,14 +187,45 @@
         }
 
         .music-lyrics {
-            width: 100%;
-            max-height: 72px;
-            overflow: hidden;
+            position: fixed;
+            left: 50%;
+            top: 24px;
+            bottom: auto;
+            transform: translateX(-50%);
+            width: min(92vw, 560px);
+            max-height: 130px;
+            overflow-y: auto;
+            overflow-x: hidden;
             text-align: center;
-            font-size: 12px;
-            line-height: 1.4;
-            color: rgba(255, 255, 255, 0.72);
-            padding: 0 4px;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 16px 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(180deg, rgba(6, 10, 18, 0.45), rgba(6, 10, 18, 0.8));
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+            mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            z-index: 18;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .music-lyrics.visible {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .music-lyrics::-webkit-scrollbar {
+            display: none;
         }
 
         .music-lyrics:empty {
@@ -202,14 +233,17 @@
         }
 
         .lyric-line {
-            padding: 1px 0;
-            transition: color 0.15s ease, opacity 0.15s ease;
-            opacity: 0.55;
+            padding: 3px 0;
+            opacity: 0.38;
+            text-wrap: balance;
+            transition: opacity 0.25s ease, color 0.25s ease, transform 0.25s ease;
         }
 
         .lyric-line.active {
             color: #ffffff;
             opacity: 1;
+            font-weight: 600;
+            transform: scale(1.03);
         }
 
         .lyric-word {
@@ -217,8 +251,30 @@
         }
 
         .lyric-word.active {
-            color: #00CED1;
-            text-shadow: 0 0 8px rgba(0, 206, 209, 0.45);
+            color: var(--primary-color, #00CED1);
+            text-shadow: 0 0 10px rgba(0, 206, 209, 0.5);
+        }
+
+        @media (min-width: 1280px) {
+            .music-lyrics {
+                left: auto;
+                right: 20px;
+                top: 50%;
+                bottom: auto;
+                transform: translateY(-50%);
+                width: 200px;
+                max-height: 64vh;
+                padding: 44px 16px;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            .music-lyrics {
+                right: 28px;
+                width: 280px;
+                font-size: 14px;
+                padding: 48px 20px;
+            }
         }
 
         .music-btn {
@@ -242,6 +298,11 @@
 
         .music-btn:hover {
             background: rgba(255, 255, 255, 0.18);
+        }
+
+        #music-lyrics-toggle[aria-pressed="true"] {
+            border-color: var(--primary-color, #00CED1);
+            color: var(--primary-color, #00CED1);
         }
 
         .music-title {
@@ -699,18 +760,30 @@
             }
 
             .music-title {
-                max-width: 52vw;
+                max-width: 38vw;
                 font-size: 11px;
+            }
+
+            .music-row {
+                gap: 6px;
             }
 
             .music-cover {
-                width: 30px;
-                height: 30px;
+                width: 26px;
+                height: 26px;
+            }
+
+            .music-btn {
+                width: 26px;
+                height: 26px;
             }
 
             .music-lyrics {
-                font-size: 11px;
-                max-height: 60px;
+                top: 14px;
+                width: 92vw;
+                max-height: 96px;
+                font-size: 12px;
+                padding: 10px 12px;
             }
 
             .volume-control, .transparency-control {
@@ -828,8 +901,10 @@
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
                     </button>
                     <span id="music-title" class="music-title">No track</span>
+                    <button id="music-lyrics-toggle" class="music-btn hidden" type="button" aria-label="Hide lyrics" aria-pressed="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h10M4 12h16M4 17h7"/></svg>
+                    </button>
                 </div>
-                <div id="music-lyrics" class="music-lyrics" aria-live="polite"></div>
             </div>
             <div class="volume-control">
                 <svg id="volume-icon" class="volume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -845,6 +920,8 @@
                 <input id="transparency-slider" class="slider" type="range" min="0" max="1" step="0.01" value="0.7">
             </div>
         </div>
+
+        <div id="music-lyrics" class="music-lyrics" aria-live="polite"></div>
     </div>
 
 
@@ -856,8 +933,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 
-    <script src="config.js?v=5"></script>
-    <script src="script.js?v=9"></script>
+    <script src="config.js?v=6"></script>
+    <script src="script.js?v=10"></script>
     <script src="discord-status.js?v=2"></script>
 </body>
 </html>
