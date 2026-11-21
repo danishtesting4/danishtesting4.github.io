@@ -67,12 +67,6 @@ const SITE_CONFIG = {
     backgroundVideo: "assets/background.mp4",
     tracks: [
       {
-        title: "The One That Got Away",
-        artist: "Katy Perry",
-        src: "assets/Katy Perry - The One That Got Away (Official Music Video).mp3",
-        cover: "assets/the-one-that-got-away-cover.png"
-      },
-      {
         title: "Just The Way You Are",
         artist: "Milky",
         src: "assets/Milky - Just The Way You Are.mp3",
